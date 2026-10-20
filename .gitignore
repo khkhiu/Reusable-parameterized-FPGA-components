@@ -1,0 +1,76 @@
+# Tool output, keep ALL generated projects under a build/ directory
+build/
+**/build/
+
+# Vitis HLS (only needed if a project lands outside build/)
+*.app
+**/solution*/
+**/proj_*/
+vitis_hls.log
+*_hls.log
+.apc/
+.settings/
+
+# Vivado
+.Xil/
+*.jou
+*.log
+*.str
+*.runs/
+*.cache/
+*.hw/
+*.gen/
+*.sim/
+*.ip_user_files/
+*.srcs/**/ip/*/
+*.xpr
+*.dcp
+webtalk*
+usage_statistics_webtalk.*
+vivado_pid*.zip
+
+# Bitstreams / hardware handoff
+*.bit
+*.bin
+*.xsa
+*.hwh
+*.dtbo
+
+# C++ build (g++ C-sim)
+*.o
+*.out
+*.exe
+*.d
+csim_*
+tb_*.elf
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# Satellite data (fetched by data/fetch_tiles.py, never committed)
+data/raw/
+data/cache/
+*.SAFE/
+*.jp2
+*.tif
+*.tiff
+*.zip
+
+# OS / editors
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Exceptions (things that match a rule above but SHOULD be committed)
+!vectors/**
+!results/**/*.csv
+!results/**/*.md
